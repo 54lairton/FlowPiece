@@ -1,0 +1,297 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+aside{
+    display: block;
+    margin: 30px;
+    width: 280px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+}
+aside > img{
+    max-width: 280px;
+    margin-bottom: 5px;
+}
+aside .sobre{
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+aside  h1{
+    padding: 5px 10px;
+    border-left: 1px solid rgb(11, 239, 255);
+    font-family: cursive;
+    margin-left: 2px;
+}
+aside .admins-info{
+    width: 90%;
+    height: auto;
+    background-color: rgb(23, 23, 23);
+    padding: 10px 5px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+aside .admins-info .admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 11, 11);
+}
+aside .admins-info .admin img{
+    width: 60px;
+    border-radius: 15px;
+}
+aside .admins-info .admin *{
+    padding: 5px;
+}
+main{
+    width: 700px;
+    height: 100%;
+    overflow: hidden;
+}
+
+main > .banner-header{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(13, 14, 14);
+    border-radius:0 0 15px 15px;
+    background-image: url(https://th.bing.com/th/id/R.295ae1989f675b1490f32ebd0ed0ee77?rik=GHsj%2ffrEvqEsqA&riu=http%3a%2f%2ffc00.deviantart.net%2ffs71%2ff%2f2010%2f090%2f8%2f7%2fOne_Piece_Banner_by_solid002.png&ehk=12oHYzcPjhlHDZUpfynbwYIp0b5ncuquYeb0IqpDs7U%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid blue;
+}
+main .social-midias{
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(4, 4, 4);
+}
+main .social-midias p{
+    padding: 5px 13px;
+}
+main .social-midias  a{
+    padding: 0 5px;
+    text-decoration: none;
+    transition: filter .5s ease;
+}
+main .social-midias  a:hover > img{
+    filter: brightness(50%);
+}
+main .social-midias  a > img{
+    width: 30px;
+}
+
+main .content-posters{
+    width: 100%;
+    height: 75%;
+    margin-top: 5px;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 5px;
+    overflow-x: hidden;
+    background-color: rgb(14, 9, 13);
+}
+main .content-posters::-webkit-scrollbar{
+    width: 5px;
+}
+main .content-posters::-webkit-scrollbar-track{
+    background-color:  rgb(35, 23, 33);
+}
+main .content-posters::-webkit-scrollbar-thumb{
+    background-color:  rgb(69, 46, 65);
+}
+main .content-posters > .post{
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+main .content-posters > .post > .userHeader{
+    display: flex;
+}
+main .content-posters > .post > .userHeader > .avatar{
+    border-radius: 50%;
+    padding: 1px 2px;
+    width: 70px;
+    border: 1px solid rgb(0, 255, 255);
+    flex-shrink: 0;
+}
+main .content-posters > .post > .userHeader > .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    color: white;
+}
+main .content-posters > .post > .userHeader > .user > .user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+main .content-posters > .post > .userHeader > .user > .user-info > .verific{
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    transition: filter .5s ease;
+}
+main .content-posters > .post > .userHeader > .user > .user-info > .verific:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+}
+main .content-posters > .post > .userHeader > .user > .user-info > .verific:hover + .verificado{
+    opacity: 100%;
+}
+main .content-posters > .post > .userHeader > .user  .fp-name{
+    font-size: 23px;
+    font-weight: 600;
+    padding: 2px;
+    flex-shrink: 0;
+}
+main .content-posters > .post > .userHeader > .user > .fp-time{
+    flex-shrink: 0;
+    padding: 2px;
+    color: #aaa;
+    font-size: 18px;
+}
+main .content-posters > .post > .messageContent{
+    padding: 8px;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-family: sans-serif;
+    background-color: rgb(10, 10, 10);
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    overflow: auto;
+    border-radius: 5px;
+}
+main .content-posters > .post > .messageContent p{
+    margin-bottom: 10px;
+}
+main .content-posters > .post > .messageContent img{
+    max-width: 340px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.235);
+}
+.verificado{
+    background-color: rgb(0, 0, 0);
+    width: 190px;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 90px 0 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.511);
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.form-contato{
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    padding: 5px;
+    color: white;
+}
+.form-contato p{
+    font-size: 20px;
+}
+.form-contato form{
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+.form-contato form label{
+    padding: 10px 0;
+    display: block;
+}
+.form-contato form input{
+    width: 100%;
+    outline: none;
+    padding: 10px 15px;
+    background-color: rgb(54, 53, 53);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+textarea{
+    width: 100%;
+    height: 120px;
+    resize: none;
+    background-color: rgb(54, 53, 53);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.form-contato form button{
+    width: 100%;
+    height: 30px;
+    background-color: darkmagenta;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+@media screen and (min-width: 0px) and (max-width: 420px){
+    aside{
+        display: none;
+    }
+    main{
+        width: 99%;
+    }
+    main > .banner-header{
+       height: 90px;
+    }
+    main .content-posters{
+        height: 83%;
+    }
+    main .content-posters > .post > .userHeader > .avatar{
+        width: 75px;
+        height: 74px;
+        margin-top: 10px;
+    }
+    main .content-posters > .post > .messageContent{
+        font-size: 1.6em;
+    }
+    .verificado{
+        width: 130px;
+    }
+    main .content-posters > .post > .messageContent img{
+        padding: 10px 8px;
+    }
+    .form-contato{
+        display: none;
+    }
+    main .content-posters > .post > .userHeader > .user  .fp-name{
+        font-size: 28px;
+    }
+}
+
+@media (min-width:420px) and (max-width:) {
+    
+}
