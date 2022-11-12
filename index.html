@@ -11,21 +11,28 @@
     <meta name="description" content="FlowPiece é um site de noticias de one piece, trazendo
     atualizações para a comunidade">
     <meta name="keywords" content="FlowPiece, One Piece Noticias, One Piece, comunidade one piece">
-    <meta http-equiv="refresh" content="0; url=./ops.html"> 
+    <!-- <meta http-equiv="refresh" content="0; url=./ops.html"> -->
     <script src="scripts/flowpiece.js" defer></script>
 </head>
 <body>
-    <aside>
+    <div class="btnMobile">
+         <button class="calendario" id="calendar">
+            <img src="https://th.bing.com/th/id/R.936307c4bdfc208aca39f2cf7560e0cb?rik=e%2bhhlTmeuBMPnw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fcalendar-icon-1600.png&ehk=hSPnpPEoV4FnISmJi7qsYZuoyDstW%2fa744SxmIaFuKQ%3d&risl=&pid=ImgRaw&r=0" alt=""
+             >
+         </button>
+        <button class="contato" id="contact">
+            <img src="https://www.collin.edu/sleep/895-8955401_contact-us-icon-in-black-ndash-free-icons.png" alt="">
+            >
+        </button>
+    </div>
+
+    <aside id="calend-aside" class="aside">
         <img src="https://th.bing.com/th/id/OIP.waxAj45ElNBXG6BM40cCBQHaDy?pid=ImgDet&rs=1">
-        <div class="admins">
-            <div class="sobre">
-                <p><span style="color: yellow;">FlowPiece</span> é um site de noticias exclusivo para comunidade de one piece trazendo informações e atualizações sobre a obrs, e claro que teremos aqueles memes legais que todo mundo adora</p>
-            </div>
-            <h1>Administração</h1>
-            <div class="admins-info">
-                <div class="admin">
-                    <img src="https://th.bing.com/th/id/R.39844fc09c0c11129ca2ec02cb480e93?rik=uVlksN5HNYUk4g&pid=ImgRaw&r=0" alt=""> <span>Mk - (ADMIN REI)</span>
-                </div>
+        <h1>Calendario</h1>
+        <div class="content-calen">
+            <div class="calend">
+                <p>EP. 1040</p>
+                <span>Domingo, 13 de nov 2022</span>
             </div>
         </div>
     </aside>
@@ -47,7 +54,7 @@
         </div>
         <!-- All Posters -->
         <div class="content-posters">
-            <div class="temp">
+             <div class="temp"> 
                 <img src="https://th.bing.com/th/id/R.7f93ed25fea9374202d905edc853b94f?rik=ZO01JDe%2frt5Mcg&pid=ImgRaw&r=0" alt="">
                 <h1>Nenhuma Noticia nesse momento</h1>
             </div>
@@ -61,17 +68,22 @@
                     font-size: 19px;
                 }
                 .temp img{
-                    width: 200px;
+                    width: 170px;
                 }
                 .temp img::selection, .temp h1::selection{
                     background-color: transparent;
                     cursor: context-menu;
                 }
-            </style>
+                .temp h1{
+                    font-size: 18px;
+                }
+            </style> -->
+
+            <!-- fim tag container poster -->
         </div>
     </main>
-    <div class="form-contato">
-        <p>Caso ache que as informações de alguma noticia estão erradas nos mande a sua correção</p>
+    <div class="form-contato"id="form-contat">
+        <p>Caso ache que as informações de alguma das noticia estão erradas nos mande a correção, que iremos corrigir o erro!</p>
         <form action="https://formsubmit.co/lairtongoncalves497@gmail.com/" method="post" autocomplete="off">
             <label for="name">Nome: </label>
             <input type="text" name="name" required placeholder="Seu nome">
@@ -81,7 +93,7 @@
             <textarea placeholder="Sua Mensagem" name="message" required></textarea>
             <button type="submit">Enviar</button>
         </form>
-        <p style="padding: 10px;">Quando recebermos a correção ou a mensagem iremos responde-lo imediatamente! obg pela atenção!</p>
+        <p style="padding: 10px;"><span style="color: yellow;">OBS:</span> Você também pode mandar uma mensagem de carinho também para agente! ☺</p>
     </div>
 </body>
 </html>
