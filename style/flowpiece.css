@@ -16,52 +16,43 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-aside{
+.btnMobile{
+    display: none;
+}
+.aside{
     display: block;
-    margin: 30px;
+    margin: 18px 15px;
     width: 280px;
     height: auto;
     overflow: hidden;
     border-radius: 10px;
     color: white;
 }
-aside > img{
+.aside > img{
     max-width: 280px;
     margin-bottom: 5px;
 }
-aside .sobre{
-    padding: 8px;
-    margin-bottom: 10px;
-    font-size: 20px;
+.aside > h1{
+    padding: 10px 5px;
+    border-left: 1px solid white;
+    font-size: 18px;
 }
-aside  h1{
-    padding: 5px 10px;
-    border-left: 1px solid rgb(11, 239, 255);
-    font-family: cursive;
-    margin-left: 2px;
-}
-aside .admins-info{
+.aside .content-calen{
+    margin: 5px auto;
     width: 90%;
     height: auto;
-    background-color: rgb(23, 23, 23);
-    padding: 10px 5px;
-    margin: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-aside .admins-info .admin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(11, 11, 11);
-}
-aside .admins-info .admin img{
-    width: 60px;
-    border-radius: 15px;
-}
-aside .admins-info .admin *{
     padding: 5px;
+}
+.aside > .content-calen > .calend{
+    background-color: rgb(29, 29, 29);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.aside > .content-calen > .calend > p{
+    color: #aaa;
+}
+.aside > .content-calen > .calend > span{
+    color: rgb(0, 255, 247);
 }
 main{
     width: 700px;
@@ -125,9 +116,10 @@ main .content-posters::-webkit-scrollbar-thumb{
 main .content-posters > .post{
     width: 100%;
     height: auto;
-    padding: 2px;
+    padding: 3px;
     border-radius: 10px;
     margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.174);
 }
 main .content-posters > .post > .userHeader{
     display: flex;
@@ -135,7 +127,9 @@ main .content-posters > .post > .userHeader{
 main .content-posters > .post > .userHeader > .avatar{
     border-radius: 50%;
     padding: 1px 2px;
-    width: 70px;
+    width: 60px;
+    height: 59px;
+    margin-top: 5px;
     border: 1px solid rgb(0, 255, 255);
     flex-shrink: 0;
 }
@@ -143,7 +137,7 @@ main .content-posters > .post > .userHeader > .user{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4px;
+    padding: 4px 6px;
     color: white;
 }
 main .content-posters > .post > .userHeader > .user > .user-info{
@@ -165,7 +159,7 @@ main .content-posters > .post > .userHeader > .user > .user-info > .verific:hove
     opacity: 100%;
 }
 main .content-posters > .post > .userHeader > .user  .fp-name{
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
     padding: 2px;
     flex-shrink: 0;
@@ -174,12 +168,12 @@ main .content-posters > .post > .userHeader > .user > .fp-time{
     flex-shrink: 0;
     padding: 2px;
     color: #aaa;
-    font-size: 18px;
+    font-size: 16px;
 }
 main .content-posters > .post > .messageContent{
     padding: 8px;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-family: sans-serif;
     background-color: rgb(10, 10, 10);
@@ -202,6 +196,7 @@ main .content-posters > .post > .messageContent img{
 .verificado{
     background-color: rgb(0, 0, 0);
     width: 190px;
+    font-size: 14px;
     text-align: center;
     padding: 8px 10px;
     border-radius: 90px 0 30px 0;
@@ -217,7 +212,7 @@ main .content-posters > .post > .messageContent img{
     color: white;
 }
 .form-contato p{
-    font-size: 20px;
+    font-size: 18px;
 }
 .form-contato form{
     width: 100%;
@@ -230,7 +225,7 @@ main .content-posters > .post > .messageContent img{
 }
 .form-contato form input{
     width: 100%;
-    outline: none;
+    outline-color: aqua;
     padding: 10px 15px;
     background-color: rgb(54, 53, 53);
     border: none;
@@ -239,6 +234,8 @@ main .content-posters > .post > .messageContent img{
     color: white;
 }
 textarea{
+    color: white;
+    outline-color: aqua;
     width: 100%;
     height: 120px;
     resize: none;
@@ -257,9 +254,46 @@ textarea{
     border-radius: 5px;
 
 }
+
+.flex{
+    display: block !important;
+}
+
 @media screen and (min-width: 0px) and (max-width: 420px){
-    aside{
+    body{
+        display: block;
+    }
+    .btnMobile{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 80px;
+        height: 180px;
+        overflow: hidden;
+        display: block;
+        text-align: center;
+        z-index: 100;
+    }
+    .btnMobile > button{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+        transition: filter .2s ease, border .2s ease;
+        text-align: center;
+        background-color: rgb(98, 52, 89);
+        border: 1px solid rgb(255, 255, 255);
+    }
+    .btnMobile > button > img{
+        max-width: 80%;
+    }
+    .aside{
         display: none;
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        height: auto;
     }
     main{
         width: 99%;
@@ -271,12 +305,16 @@ textarea{
         height: 83%;
     }
     main .content-posters > .post > .userHeader > .avatar{
-        width: 75px;
-        height: 74px;
+        width: 72px;
+        height: 70px;
         margin-top: 10px;
+        margin-right: 2px;
+    }
+    main .content-posters > .post > .userHeader > .user  .fp-name{
+        font-size: 25px;
     }
     main .content-posters > .post > .messageContent{
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
     .verificado{
         width: 130px;
@@ -286,9 +324,23 @@ textarea{
     }
     .form-contato{
         display: none;
+        position: absolute;
+        background-color: black;
+        bottom: 0;
+        margin: 0;
+        padding: 18px 10px;
+        border-radius: 5px;
     }
-    main .content-posters > .post > .userHeader > .user  .fp-name{
-        font-size: 28px;
+    .form-contato > form > input{
+        font-size: 18px;
+    }
+    .form-contato > form > textarea{
+        font-size: 18px;
+    }
+    .form-contato > form > button{
+        font-size: 18px;
+    }
+    main .content-posters > .post > .userHeader > .user > .fp-time{
+        font-size: 18px;
     }
 }
-
